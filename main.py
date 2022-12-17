@@ -54,10 +54,6 @@ while(cap.isOpened()):
                 if positions[i][0][0] - positions[len(positions)-1][0][1] < -30 and positions[i][0][0] - positions[len(positions)-1][0][1] > -300 and "Left" in str(results.multi_handedness[0]): #проверяем движение вниз по оси y и что его делает левая рука
                     keyboard.send("up") #идём к предыдущему видео
                     break
-
-        #cv2.circle(flippedRGB, (x_tip, y_tip), 10, (255, 0, 0), -1)
-    res_image = cv2.cvtColor(flippedRGB, cv2.COLOR_RGB2BGR)
-    cv2.imshow("TT-helper", res_image)
     count += 1
 
 handsDetector.close()
